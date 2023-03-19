@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar/Navbar';
+import Header from './components/Header/Header';
+import HeroBanner from './components/HeroBanner/HeroBanner';
+import AllService from './components/ServiceCard/AllService';
+import LeftNav from './components/LeftNav/LeftNav';
+import BottomIcons from './components/BottomIcons/BottomIcons';
+import RightNav from './components/RightNav/RightNav';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <Navbar />
+      <div className='flex mt-24'>
+      <div>
+      <LeftNav/>
+      </div>
+      <div>
+      <Header/>
+      <HeroBanner/>
+      <AllService/>
+      </div>
+      <div>
+        <RightNav/>
+        <BottomIcons/>
+      </div>
+      </div>
+      
     </div>
   );
 }
