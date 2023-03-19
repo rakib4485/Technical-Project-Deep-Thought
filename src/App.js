@@ -6,6 +6,7 @@ import AllService from './components/ServiceCard/AllService';
 import LeftNav from './components/LeftNav/LeftNav';
 import BottomIcons from './components/BottomIcons/BottomIcons';
 import RightNav from './components/RightNav/RightNav';
+import toast, { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
         <BottomIcons/>
       </div>
       </div>
-      
+      <Toaster/>
     </div>
   );
 }

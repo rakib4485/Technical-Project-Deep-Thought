@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import JoditEditor from 'jodit-react';
 import Accordion from '../Accordion/Accordion';
 import { FaCloudUploadAlt, FaSave } from 'react-icons/fa';
+import toast from 'react-hot-toast';
 
 const StructurePointer = () => {
     const editor = useRef(null);
@@ -14,6 +15,15 @@ const StructurePointer = () => {
         title: 'Structure you pointers ',
         content: 'Write a 400-500 word article, from your thread. Publish your understanding, and showcase your learning to the entire world. ',
     }
+
+    const handleSave = () =>{
+        toast.success("Save Successfully")
+    }
+
+    const handlePublish = () =>{
+        toast.error("Fill The Require fill")
+    }
+
     return (
         <div className='rounded-2xl h-[600px] border-2 my-12 shadow-md '>
             <Accordion
@@ -80,8 +90,8 @@ const StructurePointer = () => {
                     </div>
                 </div>
                 <div className='flex gap-2 justify-end my-10 mr-4'>
-            <button className="btn btn-sm bg-[#0029ff] hover:bg-[#0029ff] border-none"><FaSave className="text-xl mr-1" />Save draft</button>
-            <button className="btn btn-sm bg-[#0029ff] hover:bg-[#0029ff] border-none"><FaCloudUploadAlt className="text-xl mr-3" />Publish</button>
+            <button onClick={handleSave} className="btn btn-sm bg-[#0029ff] hover:bg-[#0029ff] border-none"><FaSave className="text-xl mr-1" />Save draft</button>
+            <button onClick={handlePublish} className="btn btn-sm bg-[#0029ff] hover:bg-[#0029ff] border-none"><FaCloudUploadAlt className="text-xl mr-3" />Publish</button>
             </div>
             </div>
             
